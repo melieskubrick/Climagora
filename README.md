@@ -58,6 +58,10 @@ Aqui estão os pods que foram utilizados para a construção deste app! Estes po
 <br/>Tab bar animada
 * [Redux](https://redux.js.org/)
 <br/>Armazenamento dos estados na store a partir de uma action do usuário
+* [Axios](https://redux.js.org/)
+<br/>Lib para requisição HTTP
+* [Moment](https://redux.js.org/)
+<br/>Lib para formatação da Data
 
 <!-- GETTING STARTED -->
 ## Conhecendo os Arquivos
