@@ -75,5 +75,3 @@ Aqui estão os arquivos e suas devidas funcionalidades dentro desta aplicação
 
 * <b>weather.js</b>
 <br/><p>  - Componente customizado para exibit as informações dos dados climatográficos</p>
-
-# Climagora
