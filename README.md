@@ -40,6 +40,8 @@
 
 ## Pré-Requisitos
 * React Native 0.61
+* yarn install
+* cd ios && pod install
 
 ## Pods Utilizados
 Aqui estão os pods que foram utilizados para a construção deste app! Estes pods agilizam e melhoram a performace da aplicação
