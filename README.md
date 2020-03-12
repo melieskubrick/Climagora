@@ -46,7 +46,7 @@ yarn install
 cd ios && pod install
 ```
 
-## Pods Utilizados
+## Libs Utilizadas
 Aqui estão os pods que foram utilizados para a construção deste app! Estes pods agilizam e melhoram a performace da aplicação
 * [Lottie](https://github.com/react-native-community/lottie-react-native)
 <br/>Lib para animações em formato json
