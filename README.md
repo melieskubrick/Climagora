@@ -20,6 +20,8 @@
 
 
 <!-- PROJECT LOGO -->
+
+ ![](climagora.gif)
 <br />
 <p align="center">
 <!--   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -27,7 +29,6 @@
   </a> -->
 
   <h4 align="center">CLimagora</h4>
-  ![](climagora.gif)
 
 ## Proposta
   <p align="left">
