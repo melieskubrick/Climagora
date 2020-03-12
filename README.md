@@ -28,7 +28,10 @@
     <img src="Images/logo_dn.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h4 align="center">CLimagora</h4>
+  <h4 align="center">Climagora</h4>
+  <p align="center">
+    <img width="460" height="300" src="climagora.gif">
+  </p>
 
 ## Proposta
   <p align="left">
