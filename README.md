@@ -74,4 +74,4 @@ Aqui estão os arquivos e suas devidas funcionalidades dentro desta aplicação
 <br/><p>  - Arquivo responsável pela tela de detalhe dos dados climatográficos de uma cidade escolhida</p>
 
 * <b>weather.js</b>
-<br/><p>  - Componente customizado para exibit as informações dos dados climatográficos</p>
+<br/><p>  - Componente customizado para exibir as informações dos dados climatográficos</p>
