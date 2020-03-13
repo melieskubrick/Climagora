@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Animated,
   StyleSheet,
@@ -10,12 +10,12 @@ import {
 } from 'react-native';
 import Detail from './DetailClimates';
 
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
 // Elements
-import {SearchBar} from 'react-native-elements';
-import {Center, Row} from '../config/general';
-import {Container, Card, CardView, Place} from './styles/ListOfClimatesStyles';
+import { SearchBar } from 'react-native-elements';
+import { Center, Row } from '../config/general';
+import { Container, Card, CardView, Place } from './styles/ListOfClimatesStyles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 // API
@@ -52,10 +52,7 @@ export default function ListOfClimates() {
     } else {
       setResponse(null);
     }
-
     setLoading(false);
-
-    // console.log(responseData);
   }
 
   useEffect(() => {
@@ -85,7 +82,7 @@ export default function ListOfClimates() {
   );
 
   openDetail = (data, title) => {
-    Actions.detail({title: title, woeid: data['woeid']});
+    Actions.detail({ title: title, woeid: data['woeid'] });
   };
 
   renderList = (item, index) => {
@@ -113,7 +110,7 @@ export default function ListOfClimates() {
       <FlatList
         data={responseData}
         keyExtractor={(item, index) => index.toString()}
-        renderItem={({item, index}) => renderList(item, index)}
+        renderItem={({ item, index }) => renderList(item, index)}
         ListEmptyComponent={() => <NoData />}
       />
 
