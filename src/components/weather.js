@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   View,
@@ -13,13 +13,13 @@ import {
 
 // API
 import api from '../services/api';
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 
 // Redux
-import {useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 // Elements
-import {Center, Row} from '../config/general';
+import { Center, Row } from '../config/general';
 import colors from '../config/colors';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -59,7 +59,7 @@ export default function Weather(props) {
     });
     setLoading(false);
 
-    dispatch({type: 'SELECT_CLIMATE', dataClimate: dataClimate});
+    dispatch({ type: 'SELECT_CLIMATE', dataClimate: dataClimate });
     setDateClimate(response.data['consolidated_weather']);
     datesApplicable();
   }
@@ -72,17 +72,17 @@ export default function Weather(props) {
   const datas =
     dataClimate != ''
       ? {
-          title: props.title,
-          the_temp: dataClimate[currentDay]['the_temp'],
-          max_temp: dataClimate[currentDay]['max_temp'],
-          min_temp: dataClimate[currentDay]['min_temp'],
-          the_temp: dataClimate[currentDay]['the_temp'],
-          weather_state: dataClimate[currentDay]['weather_state_name'],
-          icon: dataClimate[currentDay]['weather_state_abbr'],
-          wind_speed: dataClimate[currentDay]['wind_speed'],
-          predictability: dataClimate[currentDay]['predictability'],
-          humidity: dataClimate[currentDay]['humidity'],
-        }
+        title: props.title,
+        the_temp: dataClimate[currentDay]['the_temp'],
+        max_temp: dataClimate[currentDay]['max_temp'],
+        min_temp: dataClimate[currentDay]['min_temp'],
+        the_temp: dataClimate[currentDay]['the_temp'],
+        weather_state: dataClimate[currentDay]['weather_state_name'],
+        icon: dataClimate[currentDay]['weather_state_abbr'],
+        wind_speed: dataClimate[currentDay]['wind_speed'],
+        predictability: dataClimate[currentDay]['predictability'],
+        humidity: dataClimate[currentDay]['humidity'],
+      }
       : null;
 
   const imagesWeather = [
@@ -98,11 +98,11 @@ export default function Weather(props) {
     },
   ];
 
-  const Page = ({index}) => {
-  
+  const Page = ({ index }) => {
+
     return (<View>{setDay(index)}</View>)
-    
-  
+
+
   };
 
   const [datesClimate, setDatesClimate] = useState([]);
@@ -146,8 +146,8 @@ export default function Weather(props) {
             </Row>
 
             <Row style={styles.row}>
-              {imagesWeather.map(item => {
-                return <WeatherIcon source={item[datas.icon]} />;
+              {imagesWeather.map((item, i) => {
+                return <WeatherIcon key={i} source={item[datas.icon]} />;
               })}
               <View>
                 <Temp>{datas.the_temp.toFixed(0)}°C</Temp>
@@ -177,9 +177,9 @@ export default function Weather(props) {
       <ScrollableTabView
         tabBarActiveTextColor="#53ac49"
         renderTabBar={() => <TabBar underlineColor="#53ac49" />}>
-        
-        {datesClimate.map((date, index) => (
-          <Page tabLabel={{label: date}} index={index} />
+
+        {datesClimate.map((date, i) => (
+          <Page key={i} tabLabel={{ label: date }} index={i} />
         ))}
       </ScrollableTabView>
 
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 200,
   },
-  header: {justifyContent: 'center'},
+  header: { justifyContent: 'center' },
   loadingActivity: {
     position: 'absolute',
     top: 0,
